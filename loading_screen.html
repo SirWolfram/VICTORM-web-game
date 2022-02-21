@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Chatting with VictorM</title>
+<link rel="stylesheet" type="text/css" href="web_game.css">
+<link rel="icon" href="facebook_logo.png" type="image/icon type">
+</header>
+<body class="bodybelike">
+    <div class="game_intro">
+        <h1><marquee>loading...</marquee></h1>
+        <p>don't close tab or progress won't be saved...</p>
+        <p>fullscreen and dark theme is recommended</p>
+        <button class="red_buttons" type="button" onclick="secretfunc()">X</button>
+    </div>
+
+        
+
+
+
+
+
+
+    <!--this makes the rainbow loading effect-->
+    <style type="text/css">
+        h1 {
+          font-size: 90px;
+          white-space: nowrap;
+          overflow: hidden;
+          animation: typewriter 2s steps(13) infinite alternate,
+          blink 800ms steps(13) infinite normal;
+          border-right: 5px solid black;
+        }
+        @keyframes typewriter {
+         0%   {top: 0px; left: 0px; color: red;}
+         25%  {top: 0px; left: 100px; color: blue;}
+         50%  {top: 100px; left: 100px; color: yellow;}
+         75%  {top: 100px; left: 0px; color: green;}
+         100% {top: 0px; left: 0px; color: red;}
+        }
+        @keyframes blink {
+          from {
+            border-color: black;
+          }
+          to {
+            border-color: transparent;
+          }
+        }
+      </style>
+      <!--the fake warning about data loss-->
+      <script>
+          function secretfunc() {
+            for (let i = 0; i < 3; i++) {
+            alert("WARNING! DATA NOT SAVED!");
+          }
+          alert("what is this?");
+          let name = window.prompt("who are you?")
+          alert("facinating...");
+          if (confirm("nice to meet you " + name) == true) {
+            window.open ("actual_game.html","","fullscreen=yes");
+          } else {
+          window.close();
+          }
+
+          }
+      </script>
+
+</body>
+</html>
